@@ -50,9 +50,9 @@ The "adjusted" `.csv` file is imported into Tableau to generate the necessary vi
 
 14. The fourteenth worksheet is a heatmap with user type and start time weekday at the rows and gender at the columns. This heatmap shows the distribution of bike trips by gender and weekday in two different categories - the short-term customers and the long-term subscribers.
 
-15. The fifteenth worksheet is a line graph displaying the number of bike users that month by gender for the customers and the subscribers.
+15. The fifteenth worksheet is a line graph displaying the number of bike users that month by age and gender for the customers and the subscribers. This is an extra visualization that further explores the distribution of age, gender, and user type.
 
-16. The sixteenth worksheet is a bar chart showing the top fifty end stations according to how many bikes stop there. The bars also have the station ID numbers as a label in addition to the station name at the axis.
+16. The sixteenth worksheet is a bar chart showing the top fifty end stations according to how many bikes stop there. The bars also have the station ID numbers as a label in addition to the station name at the axis. This is an extra visualization that provides another perspective to the information shown in the fifth worksheet.
 
 ## Results
 The resulting story is published on Tableau Public. The link to this Visualization is: https://public.tableau.com/app/profile/owen.wang/viz/NYCCitiBikeAnalysis_16714261301580/TheStoryofCitiBikeNYC
@@ -91,4 +91,16 @@ The fifth story point looks at how long the bikes are used, in general and by ge
 The last story point examines the logistical side of Citi Bike. Since all bikes will need maintenance and repairs at some point in their lifetime, it is important to track how many trips a bike has taken, and how long that bike has been running. The data provided does not necessarily provide the complete picture (the bikes with the longest run time are not necessarily the bikes with the most trips), but some criteria can be put together to best estimate the threshold for pulling a bike for maintenance, repair, or even replacement. The bottom bar chart shows the top end stations identifying the name and ID and how many bike trips ended there; this helps determine which stations are popular and where extra attention may be placed.
 
 ## Summary
-Based on the story, the conclusion is:
+Based on the story, the conclusion is that Citi Bike can be a very popular service if Des Moines has enough parallels with New York City in demographics and city infrastructure. Citi Bike can be especially popular for tourists and locals living and staying in downtown, city centers, and universities where and vehicle ownership is difficult. Citi Bike can be most effective for quick commutes to destinations that are within biking distance, but this requires appropriate city infrastructure that can allow safe bike traffic with minimal risk when dealing with motor vehicles. Above all else, Citi Bike works only if the culture supports the venture.
+
+However, viability of Citi Bike in Des Moines requires a deeper study and insight into the city culture, infrastructure, and demographics. One immediate imperative prior to further analysis is to clean up the data; there are presences of null values in station IDs, and decisions will need to be made as to what to do with birth year and gender entries that do not appear valid.
+
+One future visualization that should be investigated is to chart out a map with start station IDs as the primary criterion (place in the `Pages` shelf) and end station coordinates on the axes. The count of trips will size and color the points on map to show which trips are the most popular. Adding the end station names and IDs to the `Tooltip` cards allows the user to identify the destinations by hovering the cursor over the points. This can help to form a general idea of the routes. Advanced geographical analysis can determine any trends on what is in each destination and what might bring people there (Tourism? Business? Residence? Etc.). An example screenshot is included as a concept.
+
+![Concept map - destinations for starting points](https://github.com/Owen-Wang1234/bikesharing/blob/main/Concept1.png)
+
+Another future visualization is a variation of the previous visualization; the chart replaces the start station IDs on the `Pages` shelf with the start time hours and exchanges the end station parameters for the start station parameters. The result allows the user to track the level of activity at the stations hour-by-hour to see how many trips start where at what time of the day. An example screenshot is included as a concept.
+
+![Concept map - destinations for starting points](https://github.com/Owen-Wang1234/bikesharing/blob/main/Concept2.png)
+
+This can be adjusted by changing the start time parameter between hour, day, or weekday to see how start station activity changes by the day of the month or day of the week. This comes in handy when the user wishes to try this with different months and years available on the Citi Bike data page.
