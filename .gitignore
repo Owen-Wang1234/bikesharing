@@ -1,6 +1,6 @@
 # Data files and Tableau workbooks are too large for uploading
-.csv
-.twbx
+*.csv
+*.twbx
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
