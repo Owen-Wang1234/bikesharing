@@ -57,7 +57,38 @@ The "adjusted" `.csv` file is imported into Tableau to generate the necessary vi
 ## Results
 The resulting story is published on Tableau Public. The link to this Visualization is: https://public.tableau.com/app/profile/owen.wang/viz/NYCCitiBikeAnalysis_16714261301580/TheStoryofCitiBikeNYC
 
-The story describes the state of Citi Bike in New York City within six story points.
+The story describes the state of Citi Bike in New York City within six story points, included in screenshots. The story is told in context of how Citi Bike is priced:
+
+- https://citibikenyc.com/pricing
+- https://citibikenyc.com/pricing/single-ride
+- https://citibikenyc.com/pricing/day
+- https://citibikenyc.com/pricing/annual
+
+### Citi Bike is Popular in NYC
+![Citi Bike is used nearly all over NYC](https://github.com/Owen-Wang1234/bikesharing/blob/main/Storypoint1.png)
+The first story point shows that Citi Bike is used extensively in New York City. The month of August 2019 accumulated a total of 2,344,224 bike trips, with maps showing all the bike stations in the city and their popularity based on how many bike trips started or ended there. The chart at the bottom shows that people of (literally) all ages use the Citi Bike service.
+
+### The Best Times for Citi Bike
+![Citi Bike is great for commuters and weekenders](https://github.com/Owen-Wang1234/bikesharing/blob/main/Storypoint2.png)
+The second story point shows that Citi Bike is great for people communiting between work and home as well as people just looking for a leisure trip. The peak hour ranges are between start of 8:00 AM and end of 9:00 AM and especially between start of 4:00 PM and end of 7:00 PM, where people are usually starting and/or ending their work shift. There is still a fair amount of bike usage in the middle of the day, though the heat map shows that this usually comes from weekend trips. The lull in the early mornings before sunrise and the late nights after sunset may prove useful when circulating bikes between active use and reserve for maintenance or repairs.
+
+### The Demographics of Citi Bike
+![Citi Bike has many subscribers](https://github.com/Owen-Wang1234/bikesharing/blob/main/Storypoint3.png)
+The third story point breaks down the Citi Bike demographics by type and gender. The pie charts show that nearly 5/6 of all the bike trips in August 2019 were by annual subscribers, most likely local residents, and a quarter of the bike trips were by females with 2/3 by males (the remaining segment appears to not have gender information available). The heat maps reinforce this point, and implies that the "unknowns" are very likely weekenders who just took a single ride or a day pass from a kiosk (where demographics is likely not a required input).
+
+### Drilling Deeper into Demographics
+![Looking deeper into the demographics](https://github.com/Owen-Wang1234/bikesharing/blob/main/Storypoint4.png)
+The fourth story point drills deeper into the demographics illustrated in the previous story point. The subscribers skew towards younger ages with the peak at birth year 1990 (age 29 at time of sampling). This visualization demonstrates a potential fault when asking users for demographic information; although some minimum age is implied (the maximum birth year is 2003 to correspond to the minimum age of 16), the user appears to be free to enter any birth year at will resulting in entries that date as far back as 1885.
+
+One point of interest is the spike in the birth year 1969 (age 50). It is unknown if this is unique to August 2019 or if this is widespread in the entire Citi Bike database, but this implies that this value might be a stock filler value if the user does not supply a valid birth year (if at all). Interestingly, this only happens to the "unknown" category and is particularly prominent with non-subscribers, so customers may simply decline to provide any demographics when purchasing a single ride or day pass from a kiosk.
+
+### How Long are Bikes Used?
+![The bike trips are usually less than one hour](https://github.com/Owen-Wang1234/bikesharing/blob/main/Storypoint5.png)
+The fifth story point looks at how long the bikes are used, in general and by gender. The peak is between five and six minutes, and a majority of bike trips do not exceed thirty minutes. However, some trips do go past an hour or two or even more, so that should be factored in when checking which bikes should be due for maintenance or repairs.
+
+### Possible Logistics of Citi Bike
+![How often, how long, and where](https://github.com/Owen-Wang1234/bikesharing/blob/main/Storypoint6.png)
+The last story point examines the logistical side of Citi Bike. Since all bikes will need maintenance and repairs at some point in their lifetime, it is important to track how many trips a bike has taken, and how long that bike has been running. The data provided does not necessarily provide the complete picture (the bikes with the longest run time are not necessarily the bikes with the most trips), but some criteria can be put together to best estimate the threshold for pulling a bike for maintenance, repair, or even replacement. The bottom bar chart shows the top end stations identifying the name and ID and how many bike trips ended there; this helps determine which stations are popular and where extra attention may be placed.
 
 ## Summary
 Based on the story, the conclusion is:
